@@ -38,7 +38,12 @@ jobs:
       - name: Get GKE credentials
         run: gcloud container clusters get-credentials $CLUSTER_NAME --zone $GKE_ZONE
 
-      - name: Deploy to GKE
+      - name: Apply Kubernetes manifests (create/update)
+        run: |
+          kubectl apply -f deployment.yaml
+          kubectl apply -f service.yaml
+
+      - name: Update deployment image
         run: |
           kubectl set image deployment/$DEPLOYMENT_NAME backend-shailu=$IMAGE:$GITHUB_SHA
           kubectl rollout status deployment/$DEPLOYMENT_NAME
