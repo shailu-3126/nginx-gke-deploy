@@ -1,0 +1,17 @@
+architecture: standalone
+auth:
+  rootUser: admin
+  rootPassword: MyStrongMongoPass123
+  username: priii
+  password: MyMongoUserPass456
+  database: mymongodb
+primary:
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 250m
+    limits:
+      memory: 512Mi
+      cpu: 500m
+  persistence:
+    enabled: false   # disables PVC for testing

@@ -1,0 +1,19 @@
+replicaSet:
+  enabled: true
+  name: rs0
+
+auth:
+  rootPassword: mysecurepassword
+  username: myuser
+  password: mysecurepassword
+  database: mydatabase
+
+primary:
+  persistence:
+    enabled: true
+    storageClass: "standard-rwo"   # Use WaitForFirstConsumer compatible SC
+    size: 8Gi
+
+service:
+  type: ClusterIP
+  port: 27017

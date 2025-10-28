@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "test-kumar-makala",
+  "private_key_id": "2ff3a6380a8413dab3e2c556f36b5c2c176865a5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1NG2EzG22PFa6\nDLNeryzscmIWzus78DCtCEOMjXsHYoC2Fl+bWslrOdtKkFIL8mDzFgQha5WSxQoj\nLGVXMwgO6hwu4tWMaKM1z90tciXnr44IffnVTx81b+Xz4csUn9DZSCpEHYhOm0QY\nJdHCTVM1fV1uiv9WjsOP/h2oLV4U5w026KuFvRHnQOBRBxUAVjLwLgxZVppMirj0\naTxhWGnrN2PsgOjEq1AAVHY6itMMG9WnUiDiqVEPtxT3gwN6TuXmNY+bMtKE9Ely\nibYSOdmAX69CKOSY5ZlytJFQ90NWcC3WRbFMzP4sKumqpGxV7hiYSbzXRBQm7w7r\nGR68xWKDAgMBAAECggEAIiWVFddoPVU1iq3mB0u/jXcooN+xWIQ0yAaspAntS0D2\nvFmO/rmnBzvJ5U05CONN/cECWkHp19SlymcNWddWB2l6kiNQ1rrJNtTK+0ttdTGR\n9Gu47seQPAOwM7szB9nuA2QkAt4F17pOpLZLxu/HZGcReklbQLZ6h+H9OLoD5rAq\nidE6HT62lEoAW9vOft693agQzTv2hB5cIOFkjC+AKa+jFv3KFMSAbwf876hEbkw4\n2EhimTgQYq25wi63GZxFhIpRL4Iah/CytqddaX2UBgc7ya1hlHXunmm60KjrZ4yH\nLEOWvvTvbPCMERiRwKDWbKAB37n5Z7x9qgLc90QoIQKBgQDdtx1IA71NlDY6/UsF\nFHXqWIzKM8I41cGYeI0s2b3v8YDgOhDkl/DYufFnF2muq1VTGCAUWJSaZ2FlDF9+\n6Kekqv2FcqBg19uuxQO1JzGWpttveQbV6EG5gsiLoPx3zpn+PhGqn5hx9u6rgzOE\nBxXLWKH2uvjyjsuHNw3AOeMdOwKBgQDROac9O5ZNfIdLiHcR0H0Pf0Eb5WM3ober\nDO3mNJAldeHc5ogKF3LYC+G2YlPChtHjGneYrISyyV/AlhmAAHtzyun7HO/uDDcv\nsIG7auh5KsnmzIy+Ls4uM6gBqHCdqz4ldmZLB1coIdVy5ThiIHEXnSIQKLvfRK/g\nSZyy6oEbWQKBgQDJj/tyyNOEf8V9g2B8UcmRLsdv2/YqLUo/DvlpWNqwFGIRdzh8\nWRWAMisgicxuGx0K2dfwJ0eRx4JnlwQKIACoVzr74uWipRr2m+1u9x7B0xeTE/f+\n55M4z4j6R3S+hnjBBjSRZV313YPFMRXYZYiOwRkdcYV5HhAx8P7zTq0GmQKBgQCl\n2v4oHERZyI234sYA6TU6Q7ZpVr4AK8JdZjJwetqJ15jkdBsDZPM1MLYMzoV3f0iC\nr0h/TsMit1+gW1x7i+ZRNFmnJplMK4LT2yf8WhNPegvzWdN4L8Jh/bEBH3Wmh0kM\niX8tmvQMbEW4ftzjbLQ58+Y8yQ2lP93r/m6pphwSgQKBgDPVfy3HB7/PBT8+FdW3\nyPzUgXQ0nlyXDMvzRTrtP2WcE0UcOHvE4zcBk6T5gq/7BEsxAfULdcsDcy/wGmlD\n7RtNgsYbG6GBiwQ2Ar/THgOvIOJKu/l7VmDzEUeF7upILyWGrR2KcHEJINmnfmMO\nCR5DfKJXPlmbhyFPSbk4G3dv\n-----END PRIVATE KEY-----\n",
+  "client_email": "github-actions-cicd@test-kumar-makala.iam.gserviceaccount.com",
+  "client_id": "108255282020574291193",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/github-actions-cicd%40test-kumar-makala.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

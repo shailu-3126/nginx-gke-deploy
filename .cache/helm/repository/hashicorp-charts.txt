@@ -1,0 +1,9 @@
+consul
+hcp-terraform-operator
+terraform
+vault
+terraform-cloud-operator
+terraform-enterprise
+vault-secrets-gateway
+vault-secrets-operator
+waypoint

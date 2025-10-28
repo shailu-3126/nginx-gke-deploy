@@ -1,0 +1,32 @@
+## mongo-values.yaml
+## Values for Bitnami MongoDB Helm chart
+auth:
+  enabled: true
+  rootPassword: "S3cureRootP@ssw0rd!"   # root password (choose strong pass)
+  username: "appuser"                   # non-root DB user
+  password: "AppUserP@ss123!"           # non-root user password
+  database: "appdb"                     # initial database (optional)
+
+architecture: "standalone"              # simple standalone instance (not replicaset)
+replicaSet:
+  enabled: false
+
+service:
+  type: ClusterIP
+  port: 27017
+
+persistence:
+  enabled: true
+  storageClass: "standard"               # change if your cluster uses a different storage class
+  accessModes:
+    - ReadWriteOnce
+  size: 8Gi
+
+resources:
+  requests:
+    memory: 512Mi
+    cpu: 250m
+  limits:
+    memory: 1Gi
+    cpu: 500m
+

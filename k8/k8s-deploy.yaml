@@ -1,0 +1,147 @@
+# k8s-deploy.yaml
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo
+---
+# backend1
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend1
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend1
+  template:
+    metadata:
+      labels:
+        app: backend1
+    spec:
+      containers:
+      - name: backend1
+        image: asia-south1-docker.pkg.dev/test-teraform-vm/demo-repo/backend1:v1
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend1
+  namespace: demo
+spec:
+  selector:
+    app: backend1
+  ports:
+  - port: 8000
+    targetPort: 8000
+  type: ClusterIP
+---
+# backend2
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend2
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend2
+  template:
+    metadata:
+      labels:
+        app: backend2
+    spec:
+      containers:
+      - name: backend2
+        image: asia-south1-docker.pkg.dev/test-teraform-vm/demo-repo/backend2:v1
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend2
+  namespace: demo
+spec:
+  selector:
+    app: backend2
+  ports:
+  - port: 8000
+    targetPort: 8000
+  type: ClusterIP
+---
+# backend3
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend3
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend3
+  template:
+    metadata:
+      labels:
+        app: backend3
+    spec:
+      containers:
+      - name: backend3
+        image: asia-south1-docker.pkg.dev/test-teraform-vm/demo-repo/backend3:v1
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend3
+  namespace: demo
+spec:
+  selector:
+    app: backend3
+  ports:
+  - port: 8000
+    targetPort: 8000
+  type: ClusterIP
+---
+# nginx frontend + reverse proxy
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-proxy
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-proxy
+  template:
+    metadata:
+      labels:
+        app: nginx-proxy
+    spec:
+      containers:
+      - name: nginx
+        image: asia-south1-docker.pkg.dev/test-teraform-vm/demo-repo/frontend-nginx:v1
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-proxy
+  namespace: demo
+spec:
+  selector:
+    app: nginx-proxy
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer
+

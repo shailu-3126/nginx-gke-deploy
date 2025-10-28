@@ -1,0 +1,10 @@
+2025-10-23 10:28:42.010 [info] Extension host with pid 2794 started
+2025-10-23 10:28:42.021 [info] Lock '/home/devopsclasses1990/.codeoss/data/User/workspaceStorage/-255b7732/vscode.lock': Lock acquired.
+2025-10-23 10:28:42.541 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-23 10:28:42.543 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-23 10:28:42.544 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-23 10:28:42.544 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-23 10:28:43.546 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-10-23 10:28:44.138 [info] Extension host terminating: received terminate message from renderer
+2025-10-23 10:28:44.140 [info] Lock '/home/devopsclasses1990/.codeoss/data/User/workspaceStorage/-255b7732/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2025-10-23 10:28:44.141 [info] Extension host with pid 2794 exiting with code 0

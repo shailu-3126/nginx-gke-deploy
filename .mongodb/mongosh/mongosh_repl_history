@@ -1,0 +1,22 @@
+show dbs
+db.students.countDocuments()
+db.students.find().pretty()
+db.students.insertOne({ name: "Pooja", course: "DevOps", createdAt: new Date() })
+show dbs
+// show current databases
+db.students.countDocuments()
+// count documents
+db.students.find().pretty()
+// verify insert
+db.students.insertOne({ name: "Pooja", course: "DevOps", createdAt: new Date() })
+// insert a document
+use appdb
+// switch to the app database
+exit
+db.stats()
+db.products.find()
+db.products.insertOne({ name: "Laptop", price: 50000, qty: 10 })
+db.products.find()
+db.products.insertOne({ name: "Laptop", price: 50000, qty: 10 })
+use mydatabase
+show dbs

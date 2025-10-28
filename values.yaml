@@ -1,0 +1,21 @@
+
+namespace: vault
+
+ui:
+  enabled: true
+  serviceType: LoadBalancer
+
+server:
+  ha:
+    enabled: true
+    replicas: 2             # 3 Vault pods
+    raft:
+      enabled: true
+      path: /vault/data     # Path inside PV
+      node_id: ""           # Helm will auto-generate
+  dataStorage:
+    enabled: true
+    size: 10Gi              # PV size
+    storageClass: standard  # GCP storage class (use pd-standard)
+    accessMode: ReadWriteOnce
+

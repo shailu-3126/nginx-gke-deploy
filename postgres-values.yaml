@@ -1,0 +1,12 @@
+global:
+  storageClass: standard
+
+auth:
+  username: priii
+  password: MyStrongPassword123!
+  database: mydatabase
+
+primary:
+  persistence:
+    enabled: true
+    size: 2Gi

@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  default.conf: |
+    server {
+      listen 80;
+
+      # Reverse proxy to all backend services
+      location /backend1/ {
+        proxy_pass http://backend1-svc:8080/;
+      }
+      location /backend2/ {
+        proxy_pass http://backend2-svc:8080/;
+      }
+      location /backend3/ {
+        proxy_pass http://backend3-svc:8080/;
+      }
+
+      # Frontend
+      location / {
+        proxy_pass http://frontend-svc:80/;
+      }
+    }

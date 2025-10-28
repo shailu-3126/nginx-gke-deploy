@@ -1,0 +1,23 @@
+# postgres-values.yaml
+global:
+  postgresql:
+    postgresqlDatabase: appdb
+    postgresqlUsername: appuser
+    postgresqlPassword: "S3cureP@ssw0rd!"
+postgresql:
+  fullnameOverride: my-postgres-postgresql
+  auth:
+    # You may prefer to set password as a Kubernetes secret; this shows direct value for simplicity
+    username: appuser
+    database: appdb
+    password: "S3cureP@ssw0rd!"
+  primary:
+    persistence:
+      enabled: true
+      storageClass: "standard"
+      accessModes:
+        - ReadWriteOnce
+      size: 10Gi
+  metrics:
+    enabled: false
+
