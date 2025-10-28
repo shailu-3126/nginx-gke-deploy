@@ -24,11 +24,11 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_KEY }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
 
       - name: Configure Docker to use gcloud
-        run: gcloud auth configure-docker gcr.io
+        run: gcloud auth configure-docker gcr.io --quiet
 
       - name: Build and push Docker image
         run: |
@@ -36,7 +36,8 @@ jobs:
           docker push $IMAGE:$GITHUB_SHA
 
       - name: Get GKE credentials
-        run: gcloud container clusters get-credentials $CLUSTER_NAME --zone $GKE_ZONE
+        run: |
+          gcloud container clusters get-credentials $CLUSTER_NAME --zone $GKE_ZONE --project $PROJECT_ID
 
       - name: Apply Kubernetes manifests (create/update)
         run: |
